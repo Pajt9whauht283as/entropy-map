@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "entropy-map"
+version = "1.0.0"
+description = "Visual entropy analysis for binaries and archives: packer detection, embedded objects, PE/ELF sections"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Pajt9whauht283as" }]
+keywords = ["entropy", "reverse-engineering", "malware-analysis", "packer", "pe", "elf"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Software Development :: Disassemblers",
+]
+
+[project.scripts]
+entropy-map = "entropymap.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Pajt9whauht283as/entropy-map"
+
+[tool.setuptools.packages.find]
+include = ["entropymap*"]
